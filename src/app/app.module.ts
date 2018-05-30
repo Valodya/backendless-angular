@@ -1,16 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import Backendless from 'backendless';
 
+import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
+import { PersonsListComponent } from './persons-list/persons-list.component';
+import { AddNewPersonComponent } from './add-new-person/add-new-person.component';
+
+Backendless.initApp(environment.backendless.APP_ID, environment.backendless.API_KEY);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PersonsListComponent,
+    AddNewPersonComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
