@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { PersonsListComponent } from './persons-list/persons-list.component';
 import { AddNewPersonComponent } from './add-new-person/add-new-person.component';
+import { ConnectionsCounterComponent } from './connections-counter/connections-counter.component';
 
 Backendless.initApp(environment.backendless.APP_ID, environment.backendless.API_KEY);
 
@@ -14,7 +15,8 @@ Backendless.initApp(environment.backendless.APP_ID, environment.backendless.API_
   declarations: [
     AppComponent,
     PersonsListComponent,
-    AddNewPersonComponent
+    AddNewPersonComponent,
+    ConnectionsCounterComponent
   ],
   imports: [
     BrowserModule,
